@@ -1,0 +1,65 @@
+using System;
+
+namespace Atchoco
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double pounds;
+
+            Console.Write("Enter weight in pounds: ");
+            pounds = Convert.ToDouble(Console.ReadLine());
+
+            double kilograms = pounds * 0.453592;
+
+            Console.WriteLine("Weight in pounds: {0}", pounds);
+            Console.WriteLine("Weight in kilograms: {0}", kilograms);
+            
+            int[] studentAges = new int[10];
+double averageAge = 0;
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Enter age for student {0}: ", i + 1);
+    studentAges[i] = Convert.ToInt32(Console.ReadLine());
+    averageAge += studentAges[i];
+}
+
+averageAge /= 10;
+
+Console.WriteLine("Student ages: {0}", string.Join(", ", studentAges));
+Console.WriteLine("Average age: {0}", averageAge);
+
+string character1 = "Gandalf";
+string character2 = "Aragorn";
+
+
+string story = "In the realm of Middle-earth, " + character1 + " the wizard journeyed alongside " + character2 + " the ranger, wielding the mighty sword Andúril. ";
+
+
+Console.WriteLine(story);
+
+int inputNumber;
+
+Console.Write("Enter a positive number: ");
+inputNumber = Convert.ToInt32(Console.ReadLine());
+
+if (inputNumber > 0)
+{
+    for (int i = 1; i <= inputNumber; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            Console.Write(j + " ");
+        }
+        Console.WriteLine();
+    }
+}
+else
+{
+    Console.WriteLine("Invalid input");
+}
+        }
+    }
+}
